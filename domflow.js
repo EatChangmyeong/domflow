@@ -32,8 +32,9 @@ var Dfe = function(root, name, attributes) {
 		if(typeof attributes[i] === 'object')
 			switch(i) {
 				case 'dataset':
+				case 'style':
 					for(var j in attributes[i])
-						this.raw.dataset[j] = attributes[i][j];
+						this.raw[i][j] = attributes[i][j];
 				break;
 				case 'on':
 					for(var j in attributes[i])
