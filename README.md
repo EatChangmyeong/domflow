@@ -47,6 +47,8 @@ The `attributes` object is an object consisting of zero or more key-value pairs.
 
 If the `attributes` object contains a `dataset` key and its value is another object, its key-value pairs will be the element's `data-*` attributes.
 
+If the `attributes` object contains a `style` key and its value is another object, its key-value pairs will be the element's inline CSS rules.
+
 If the `attributes` object contains an `on` key and its value is another object, its key-value pairs will be the element's event handlers.
 
 If the resulting element is one of the empty elements listed below, this method will return the original element:
@@ -91,14 +93,14 @@ t.t(' jumps over the lazy dog.');
 ### `.br()`
 - Arguments<br>None.
 
-An alias for `.e('br')`.
+A shortcut of `.e('br')`.
 
 ### `.then(name[, attributes])`
 - Arguments
 	- `name`
 	- `attributes` (optional)
 
-An alias for `.up.e(name[, attributes])`. Not to be confused with promises.
+A shortcut of `.up.e(name[, attributes])`. Not to be confused with promises.
 
 ### `.et(name[, attributes], text)`
 - Arguments
@@ -106,7 +108,7 @@ An alias for `.up.e(name[, attributes])`. Not to be confused with promises.
 	- `attributes` (optional)
 	- `text`
 
-An alias for `.e(name[, attributes]).t(text).up()`.
+A shortcut of `.e(name[, attributes]).t(text).up()`. Empty elements are not allowed to create this way.
 
 ### `.append(element)`
 - Arguments
