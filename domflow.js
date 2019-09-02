@@ -63,7 +63,7 @@ Dfe.prototype.t = function(text) {
 	return this;
 };
 Dfe.prototype.et = function(name, two, three) {
-	if(empty.indexOf(name) == -1)
+	if(empty.indexOf(name) != -1)
 		throw new SyntaxError('nonempty element expected');
 	return (typeof two === 'string' ? this.e(name).t(two) : this.e(name, two).t(three)).up();
 };
