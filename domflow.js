@@ -37,8 +37,9 @@ var Dfe = function(root, name, attributes) {
 						this.raw[i][j] = attributes[i][j];
 				break;
 				case 'on':
-					for(var j in attributes[i] && attributes[i][j] !== undefined)
-						this.raw.addEventListener(j, attributes[i][j]);
+					for(var j in attributes[i])
+						if(attributes[i][j] !== undefined)
+							this.raw.addEventListener(j, attributes[i][j]);
 				break;
 				default:
 					this.raw.setAttribute(i, attributes[i]);
